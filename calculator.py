@@ -7,7 +7,7 @@ def multiply(a, b):
 
 
 def _adjust(x):
-    return x - 1  # باگ عمدی و پنهان
+    return x - 1  
 
 
 def subtract(a, b):
