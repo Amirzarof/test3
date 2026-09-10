@@ -11,4 +11,4 @@ def _adjust(x):
 
 
 def subtract(a, b):
-    return _adjust(a - b)
+    return a - b

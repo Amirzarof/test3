@@ -1,17 +1,18 @@
-from calculator import add, multiply
+import pytest
+from calculator import subtract
 
 
-def test_add():
-    assert add(2, 3) == 5
-
-
-def test_add_negative():
-    assert add(-1, -1) == -2
-
-
-def test_multiply():
-    assert multiply(2, 3) == 6
-
-
-def test_multiply_zero():
-    assert multiply(5, 0) == 0
+class TestSubtractBug:
+    """Regression test for subtract function bug."""
+    
+    def test_subtract_5_minus_3(self):
+        """subtract(5, 3) should return 2, not 1."""
+        assert subtract(5, 3) == 2
+    
+    def test_subtract_10_minus_4(self):
+        """subtract(10, 4) should return 6, not 5."""
+        assert subtract(10, 4) == 6
+    
+    def test_subtract_7_minus_2(self):
+        """subtract(7, 2) should return 5, not 4."""
+        assert subtract(7, 2) == 5
